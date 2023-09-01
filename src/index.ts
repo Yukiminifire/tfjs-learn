@@ -1,9 +1,16 @@
-import {tensor,scalar, variable, rand, tensor1d, SGDOptimizer, train} from "@tensorflow/tfjs"
-import "@tensorflow/tfjs-node"
+import {tensor,scalar, variable, train} from "@tensorflow/tfjs"
+import {Point2D, render} from "@tensorflow/tfjs-vis"
 
 // y = 2x + 3
 const dataX = tensor([1,2,3,4,5,6,7,8,9])
 const dataY = dataX.mul(scalar(2)).add(scalar(3))
+
+render.scatterplot({name:"线性回归训练集"},{values:[1,2,3,4,5,6,7,8,9].map((x)=>{
+    return {
+        x,
+        y:2*x+3
+    } as Point2D
+}),series:["默认数据"]})
 
 // 尝试拟合
 const k = variable(scalar(Math.random()))
@@ -21,6 +28,8 @@ for (let index = 0; index < 10000; index++) {
         return loss.asScalar()
     })
 }
+
+
 
 // 训练结果
 console.log("result")

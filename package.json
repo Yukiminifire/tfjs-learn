@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch ./src/index.ts"
+    "dev": "tsx watch ./src/index.ts",
+    "serve": "vite"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +13,8 @@
   "dependencies": {
     "@tensorflow/tfjs": "^4.10.0",
     "@tensorflow/tfjs-node": "^4.10.0",
-    "tsx": "^3.12.7"
+    "@tensorflow/tfjs-vis": "^1.5.1",
+    "tsx": "^3.12.7",
+    "vite": "^4.4.9"
   }
 }
