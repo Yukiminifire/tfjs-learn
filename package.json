@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@tensorflow/tfjs": "^4.10.0",
+    "@tensorflow/tfjs-backend-webgl": "^4.10.0",
     "@tensorflow/tfjs-node": "^4.10.0",
     "@tensorflow/tfjs-vis": "^1.5.1",
     "tsx": "^3.12.7",
